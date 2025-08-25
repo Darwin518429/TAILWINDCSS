@@ -1,0 +1,8 @@
+
+// Configuracion es para que el tailwindcss funcione en vscode
+{
+"files.associations": 
+{
+"*.css": "tailwindcss"
+}
+}
