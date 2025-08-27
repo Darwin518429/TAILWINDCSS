@@ -7,17 +7,29 @@
     <link href="tailwindconfig/output.css" rel="stylesheet">
     <script src="./interactividad.js" defer ></script>
 </head>
-<body class="bg-amber-500 border-2  flex  flex-col  min-h-dvh">
+<body class="bg-green-500 flex  flex-col  min-h-dvh relative">
     
-        <header class="text-6xl text-center"> MEMES BLOGS
+        <header class="text-6xl text-center bg-green-500 border-2 w-full "> MEMES BLOGS
         <nav class="flex  flex-row gap-4 text-3xl justify-center">
-            <a href="#">Inicio</a>
+            <a href="./index.html">Inicio</a>
             <a href="#">Memes</a>
+            <a href="#"> Foro    </a>
             <a href="#">Contacto</a>
         </nav>
         </header>
    <main class="border-black border-2  ">
+
+    <section>
+        <div class="max-w-2xl mx-auto my-8 p-6 rounded-lg shadow-md bg-green-300">
+            <h1 class="text-4xl font-bold mb-4 text-center  text-gray-700">Bienvenido a Meme Blogs</h1>
+            <p class="text-xl text-gray-700 text-center">
+                Meme Blogs es tu espacio para descubrir, compartir y disfrutar los memes más divertidos de la web. Aquí encontrarás una selección de imágenes graciosas, comentarios ingeniosos y contenido creado por nuestra comunidad. ¡Explora, ríe y participa!
+            </p>
+        </div>
+    </section>
+    <h1 class="text-center text-4xl">Memes</h1>
     <section class="flex flex-wrap justify-center">
+       
         <article class="memes ">
             <h2 class="text-3xl text-center mb-4">Coca de Hamaica </h2>
             <img src="./MemesImg/Homero.jpg" alt="Meme divertido" class="mx-auto mb-4 rounded-lg">
@@ -40,9 +52,34 @@
             <p class="text-xl"> Realizado por pepe </p>
         </article>
     </section>
-    
+        
+        <section>
+            <h1 class="text-center text-4xl">Foro </h1>
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto my-8">
+                <h2 class="text-3xl font-bold mb-4 text-center">Únete a la conversación</h2>
+                <form id="foroForm" class="space-y-4">
+                    <div>
+                        <label for="nombre" class="block text-lg font-medium text-gray-700">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label for="comentario" class="block text-lg font-medium text-gray-700">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" class="w-full p-2 border border-gray-300 rounded-lg" required></textarea>
+                    </div>
+                    <button id="botton" type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600" >Enviar</button>
+                </form>
+                <div id="comentariosSection" class="mt-6">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Comentarios Recientes</h3>
+                    <div id="comentariosList" class="space-y-4" >
+                        <!-- Los comentarios se agregarán aquí dinámicamente -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
-    <footer class="text-center text-2xl mt-auto bg-amber-900"> 2024 - Todos los derechos reservados
+    <footer class="text-center text-2xl mt-auto bg-emerald-500"> (+34) 00000000 <br>
+        meme@blog.com
         <br> 
         <a class="text-blue-600 underline">Contactos </a>
     </footer>

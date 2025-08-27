@@ -1,79 +1,30 @@
+let nombreInput = document.getElementById("nombre");  //selecionamos elos elementos 
+let comentInput = document.getElementById("comentario");
+let boton = document.getElementById("botton");
+let areaComentarios = document.getElementById("comentariosSection");
 
-import { Carousel } from 'flowbite';
+function enviarComentario() {
+if (nombreInput.value === "" || comentInput.value === "") {
+    return;
+}
 
-const carousel = new Carousel(carouselElement, items, options, instanceOptions);
-const carouselElement = document.getElementById('carousel-example');
+    const nombre = nombreInput.value;
+    const comentario = comentInput.value;
 
-const items = [
-    {
-        position: 0,
-        el: document.getElementById('carousel-item-1'),
-    },
-    {
-        position: 1,
-        el: document.getElementById('carousel-item-2'),
-    },
-    {
-        position: 2,
-        el: document.getElementById('carousel-item-3'),
-    },
-    {
-        position: 3,
-        el: document.getElementById('carousel-item-4'),
-    },
-];
+    // Crear comentario
+    const nuevoComentario = document.createElement("p");
+    nuevoComentario.textContent = `${nombre}:  
+    ${comentario}`;
 
-// options with default values
-const options = {
-    defaultPosition: 1,
-    interval: 3000,
+    // comentarios
+    areaComentarios.appendChild(nuevoComentario);
 
-    indicators: {
-        activeClasses: 'bg-white dark:bg-gray-800',
-        inactiveClasses:
-            'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800',
-        items: [
-            {
-                position: 0,
-                el: document.getElementById('carousel-indicator-1'),
-            },
-            {
-                position: 1,
-                el: document.getElementById('carousel-indicator-2'),
-            },
-            {
-                position: 2,
-                el: document.getElementById('carousel-indicator-3'),
-            },
-            {
-                position: 3,
-                el: document.getElementById('carousel-indicator-4'),
-            },
-        ],
-    },
+    // Limpiar 
 
-    // callback functions
-    onNext: () => {
-        console.log('next slider item is shown');
-    },
-    onPrev: () => {
-        console.log('previous slider item is shown');
-    },
-    onChange: () => {
-        console.log('new slider item has been shown');
-    },
-};
+    nombreInput.value = "";
+    comentInput.value = "";
+}
 
-// instance options object
-const instanceOptions = {
-  id: 'carousel-example',
-  override: true
-};
-// jumps to the 3rd position (position starts from 0)
-carousel.slideTo(2);
 
-// goes to the next (right) slide
-carousel.next();
-
-// goes to the previous (left) slide
-carousel.prev();
+    boton.addEventListener("click", enviarComentario);
+   
