@@ -12,13 +12,13 @@
         <header class="text-6xl text-center bg-green-500 border-2 w-full "> MEMES BLOGS
         <nav class="flex  flex-row gap-4 text-3xl justify-center">
             <a href="./index.html">Inicio</a>
-            <a href="#">Memes</a>
-            <a href="#"> Foro    </a>
-            <a href="#">Contacto</a>
+            <a href="#shitpost">Memes</a>
+            <a href="#foro"> Foro    </a>
+            <a href="#contact">Contacto</a>
         </nav>
         </header>
-   <main class="border-black border-2  ">
-
+   <main class="border-black border-2">
+   
     <section>
         <div class="max-w-2xl mx-auto my-8 p-6 rounded-lg shadow-md bg-green-300">
             <h1 class="text-4xl font-bold mb-4 text-center  text-gray-700">Bienvenido a Meme Blogs</h1>
@@ -26,8 +26,13 @@
                 Meme Blogs es tu espacio para descubrir, compartir y disfrutar los memes más divertidos de la web. Aquí encontrarás una selección de imágenes graciosas, comentarios ingeniosos y contenido creado por nuestra comunidad. ¡Explora, ríe y participa!
             </p>
         </div>
+        
     </section>
-    <h1 class="text-center text-4xl">Memes</h1>
+    <figure>
+        <img src="./MemesImg/perro.jpg" alt="Imagen principal de memes" class="w-full h-full max-h-96 object-cover mask-b-from-50% mask-radial-[40%_90%] mask-radial-from-80% rounded-full ">
+        <figcaption class="text-center text-lg text-gray-700 mt-2">Fundador Don Perraco</figcaption>
+    </figure>
+    <h1 class="text-center text-4xl" id="shitpost">Memes</h1>
     <section class="flex flex-wrap justify-center">
        
         <article class="memes ">
@@ -52,10 +57,10 @@
             <p class="text-xl"> Realizado por pepe </p>
         </article>
     </section>
-        
+        <!-- Foro -->
         <section>
-            <h1 class="text-center text-4xl">Foro </h1>
-            <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto my-8">
+            <h1 class="text-center text-4xl" id="foro">Foro </h1>
+            <div class="bg-white p-6 rounded-lg shadow-md  my-8 max-w-2xl mx-auto">
                 <h2 class="text-3xl font-bold mb-4 text-center">Únete a la conversación</h2>
                 <form id="foroForm" class="space-y-4">
                     <div>
@@ -71,17 +76,43 @@
                 <div id="comentariosSection" class="mt-6">
                     <h3 class="text-2xl font-bold mb-4 text-center">Comentarios Recientes</h3>
                     <div id="comentariosList" class="space-y-4" >
-                        <!-- Los comentarios se agregarán aquí dinámicamente -->
+                        <!-- Los comentarios se agregarán aquí -->
                     </div>
                 </div>
 
             </div>
+            <section>
+                <h1 class="text-center text-4xl " id="contact">Contacto </h1>
+             
+            <div class="bg-white p-6 rounded-lg shadow-md  my-8 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Únete a la conversación</h2>
+                <form id="foroForm" class="space-y-4">
+                    <div>
+                        <label for="nom" class="block text-lg font-medium text-gray-700">Nombre:</label>
+                        <input type="text" id="nom" name="nombre" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Juan" required>
+                    </div>
+
+                    <div>
+                        <label for="correo" class="block text-lg font-medium text-gray-700">Correo:</label>
+                        <input type="email" id="correo" name="nombre" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="juan@dominio.com" required>
+                    </div>
+
+
+                    <div>
+                        <label for="coment" class="block text-lg font-medium text-gray-700">Comentario:</label>
+                        <textarea id="coment" name="comentario" rows="4" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Buen Meme" required></textarea>
+                    </div>
+
+                    <button  type="submit" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600" >Enviar</button>
+                </form>
+                
+              
+            </section>
         </section>
     </main>
     <footer class="text-center text-2xl mt-auto bg-emerald-500"> (+34) 00000000 <br>
         meme@blog.com
-        <br> 
-        <a class="text-blue-600 underline">Contactos </a>
+        
     </footer>
     
 </body>
