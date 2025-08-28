@@ -7,10 +7,10 @@
     <link href="tailwindconfig/output.css" rel="stylesheet">
     <script src="./interactividad.js" defer ></script>
 </head>
-<body class="bg-green-500 flex  flex-col  min-h-dvh relative">
+<body class="bg-green-500 flex  flex-col  min-h-dvh relative ">
     
         <header class="text-6xl text-center bg-green-500 border-2 w-full "> MEMES BLOGS
-        <nav class="flex  flex-row gap-4 text-3xl justify-center">
+        <nav class="flex  flex-row gap-4 text-3xl justify-center  max-[400px]:flex-col">
             <a href="./index.html">Inicio</a>
             <a href="#shitpost">Memes</a>
             <a href="#foro"> Foro    </a>
@@ -28,8 +28,8 @@
         </div>
         
     </section>
-    <figure>
-        <img src="./MemesImg/perro.jpg" alt="Imagen principal de memes" class="w-full h-full max-h-96 object-cover mask-b-from-50% mask-radial-[40%_90%] mask-radial-from-80% rounded-full ">
+    <figure class="flex flex-col items-center justify-center">
+        <img src="./MemesImg/perro.jpg" alt="Imagen principal de memes" class="w-full h-full max-h-[450px] object-cover mask-b-from-50% mask-radial-[40%_90%] mask-radial-from-80% rounded-full min-[1200px]:max-w-[550px]">
         <figcaption class="text-center text-lg text-gray-700 mt-2">Fundador Don Perraco</figcaption>
     </figure>
     <h1 class="text-center text-4xl" id="shitpost">Memes</h1>
