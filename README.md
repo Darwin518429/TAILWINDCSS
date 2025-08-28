@@ -1,4 +1,4 @@
-#CSS TAILWIND BASICO
+# CSS TAILWIND BASICO
 
 
 
@@ -14,7 +14,7 @@ Se han aplicado estilos básicos de Tailwind para colores, tipografía, márgene
 
 - Estructura limpia y semántica: uso de etiquetas HTML como header, section, article y footer.
 
-####Local
+#### Local
 1. `cd .../tailwind-dw/`
 
 2. `npm start `
