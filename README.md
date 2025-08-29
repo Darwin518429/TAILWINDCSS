@@ -14,6 +14,10 @@ Se han aplicado estilos básicos de Tailwind para colores, tipografía, márgene
 
 - Estructura limpia y semántica: uso de etiquetas HTML como header, section, article y footer.
 
+Requisitos 		|  Version
+------------- 	| -------------
+ NPM  			| +10.9.3V
+
 #### Local
 1. `cd .../tailwind-dw/`
 
